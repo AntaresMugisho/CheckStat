@@ -26,7 +26,7 @@ function NFCScanner({ Data }) {
         const uid = decrypted.toString(CryptoJS.enc.Utf8);
 
         if (uid) {
-          let link = "http://check-stat.is-best.net/api/etudiants/" + uid
+          let link = "https://check-stat.is-best.net/api/etudiants/" + uid
           axios.get(link)
             .then(({ data }) => {
               Data(data);
